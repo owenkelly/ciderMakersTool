@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" type="text/css" href="cidertool.css">
+  <meta charset="UTF-8">
+  <title>Cider Tool</title>
+</head>
+<body>
+<script  src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+<script src="cidertool.js"></script>
+  <h1>Select your Apples:</h1>
+  <div id="a1" class="apple">
+  <form id="f1">
+    <select name="preapples">
+      <option>Choose Apple</option>
+    </select>
+    Variety: <input type='text' name='variety' />
+    Specific Gravity: <input type='number' name='sg' step="any" min="1"/>
+    Titratable Acidity: <input type='number' name='ta' step="any" min="0"/><br/>
+    Tannins: <input type='number' name='tannin' step="any" min="0"/>
+    Percent of Batch: <input type='number' name='percent' step="any" min="0" max="100" value="100" />
+    <input type='submit' name='submit' value='submit' step="any" min="0"/>
+  </form>
+  </div>
+  <h1>Your Cider:</h1>
+  <div class="cider" id="a2">
+  <div id ="chart" align="center"><canvas id="blendChart" width="200" height="200"></canvas></div>
+  <div id="spec"><h3>Blend Specs:</h3><ul id="blendspec"></ul></div>
+  <div id="abv">
+   <form id="f2">
+    <select name="yeast">
+      <option>Choose Yeast</option>
+    </select>
+    Attenuation: <input type='number' name="attenuation" step="any" min="0" />
+    <input type='submit' name='submit' value='submit' step="any" min="0"/>
+  </form>
+    <h3>Finished Cider:</h3><ul id="finished"></ul>
+  </div>
+  </div>
+ <button id="reset">Reset</button>
+ </body>
+</html>
